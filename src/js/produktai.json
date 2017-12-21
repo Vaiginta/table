@@ -1,0 +1,13 @@
+{
+    "headers": ["produkto numeris", "aprasymas"],
+    "body": [
+        { "produkto numeris": "a1",
+          "aprasymas": "blah blah" },
+        { "produkto numeris": "a2",
+        "aprasymas": "blah blah" },
+        { "produkto numeris": "a3",
+            "aprasymas": "blah blah" },
+        { "produkto numeris": "a4",
+        "aprasymas": "blah blah" }
+    ]
+}

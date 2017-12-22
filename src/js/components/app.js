@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Table from './table';
+import Produktai from './produktai';
+import Uzsakymai from './uzsakymai/uzsakymai';
 
 class App extends Component {
 
@@ -8,12 +9,18 @@ class App extends Component {
   }
   
   render () {
-    const { produktai } = this.props;
-    
+    const { produktai, uzsakymai } = this.props;
+    const uzakymaiProps = {
+      kurtiNaujaUzsakyma:this.props.kurtiNaujaUzsakyma
+    };
+
     return (
       <div className='app-root'>
-        <Table 
-          data = {produktai}
+        <Uzsakymai 
+          {...{uzsakymai, uzakymaiProps}}
+        />
+        <Produktai 
+          {...{produktai}}
         />
       </div>
     );

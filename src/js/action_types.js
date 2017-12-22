@@ -1,1 +1,2 @@
 export const TOGGLE = 'TOGGLE';
+export const KURTI_NAUJA_UZSAKYMA = 'KURTI_NAUJA_UZSAKYMA';

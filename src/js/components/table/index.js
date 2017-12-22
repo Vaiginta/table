@@ -13,9 +13,10 @@ class Table extends Component {
 
     return (
       <div className='table'>
-          <Header headers={data.get('headers')} />
+          <h2>{data.get('name')}</h2>
+          <Header headers={data.get('headersNames')} />
           <Body 
-            headers={data.get("headers")}
+            headers={data.get("headersKeys")}
             body={data.get('body')}  
            />
       </div>

@@ -5,7 +5,8 @@ import * as actionCreators from '../actions/app.js';
 const mapStateToProps = state => {
   return {
     toggledValue: state.getIn(['app', 'toggledValue']),
-    produktai: state.getIn(['app', 'produktai'])
+    produktai: state.getIn(['app', 'produktai']),
+    uzsakymai: state.getIn(['app', 'uzsakymai']),
   }
 }
 

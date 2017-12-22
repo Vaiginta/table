@@ -1,13 +1,15 @@
 {
-    "headers": ["produkto numeris", "aprasymas"],
+    "name": "produktai",
+    "headersNames": ["produkto numeris", "aprasymas"],
+    "headersKeys": ["produktoNumeris", "aprasymas"],
     "body": [
-        { "produkto numeris": "a1",
+        { "produktoNumeris": "a1",
           "aprasymas": "blah blah" },
-        { "produkto numeris": "a2",
+        { "produktoNumeris": "a2",
         "aprasymas": "blah blah" },
-        { "produkto numeris": "a3",
+        { "produktoNumeris": "a3",
             "aprasymas": "blah blah" },
-        { "produkto numeris": "a4",
+        { "produktoNumeris": "a4",
         "aprasymas": "blah blah" }
     ]
 }

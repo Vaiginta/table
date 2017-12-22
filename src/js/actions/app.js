@@ -1,11 +1,10 @@
 import {
-  TOGGLE
+  KURTI_NAUJA_UZSAKYMA
  } from '../action_types.js';
 
-export const toggle = (path) => {
+export const kurtiNaujaUzsakyma = () => {
   
     return {
-      type: TOGGLE,
-      path
+      type: KURTI_NAUJA_UZSAKYMA
    };
  };

@@ -1,0 +1,6 @@
+{
+    "name": "uzsakymai",
+    "headersNames": ["uzsakymo numeris", "uzsakymo data"],
+    "headersKeys": ["uzsakymoNumeris", "uzsakymoData"],
+    "body": []
+}

@@ -1,0 +1,6 @@
+{
+    "name": "uzsakymo/vaztarascio eilute",
+    "headersNames": ["uzsakymo numeris", "eiles numeris", "produkto numeris", "aprasymas", "kiekis", "kaina", "suma"],
+    "headersKeys": ["uzsakymoNumeris", "eilesNumeris", "produktoNumeris", "aprasymas", "kiekis", "kaina", "suma"],
+    "body": []
+}

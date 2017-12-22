@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from './../table';
+import Eilute from './../eilute/eilute';
 import './uzsakymai.scss';
 
 class Uzsakymai extends Component {
@@ -18,6 +19,9 @@ class Uzsakymai extends Component {
         </div>
         <Table 
           data = {uzsakymai}
+        />
+        <Eilute 
+          uzsakymai = {uzsakymai}
         />
       </div>
     );

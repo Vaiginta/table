@@ -7,14 +7,19 @@ class Eilute extends Component {
   constructor () {
     super();
   }
-  
+
   render () {
-    const { uzsakymai } = this.props;
-    
+    const { uzsakymoEilute, toggleNewRow, isNewRowToggled, setInput, saveRow } = this.props;
+
     return (
       <div className='eilute'>
-        <Table 
-          data = {uzsakymai}
+        <Table
+          data = {uzsakymoEilute}
+          toggleNewRow = {toggleNewRow}
+          isNewRowToggled = {isNewRowToggled}
+          path = {'uzsakymoEilutes'}
+          setInput = {setInput}
+          saveRow = {saveRow}
         />
       </div>
     );

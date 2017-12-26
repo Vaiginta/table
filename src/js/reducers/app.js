@@ -2,29 +2,41 @@ import Immutable, { Map } from 'immutable';
 import createReducer
   from './createReducer.js';
 import {
-  KURTI_NAUJA_UZSAKYMA
+  TOGGLE_NEW_ROW,
+  SET_INPUT,
+  SAVE_ROW
 } from '../action_types.js';
 import produktai from '../produktai.json';
 import uzsakymai from '../uzsakymai.json';
+import uzsakymoEilutes from '../uzsakymo_eilute.json';
 
 export const initialState = Immutable.fromJS({
-  produktai:produktai,
-  uzsakymai:uzsakymai
+  uzsakymoEilutes:uzsakymoEilutes,
+  isNewRowToggled:{},
+  cellValues:{}
 });
 
-export const kurtiNaujaUzsakyma = (state, {}) => {
-  let uzsakymai = state.getIn(['uzsakymai', 'body']);
-  let uzsakymuSkaicius = uzsakymai.size;
-  let uzsakymoData = new Date();
-  let naujiUzsakymai = uzsakymai.concat(Immutable.fromJS([{uzsakymoNumeris: uzsakymuSkaicius + 1, uzsakymoData: uzsakymoData.toLocaleDateString("en-US").toString()}]))
+export const saveRow = (state, {path}) => {
+  let bodyData = state.getIn([path, 'body']);
+  let newRowData = state.getIn(['cellValues', path]);
+  let bodyDataWithNewRow = bodyData.concat([newRowData]);
+  return state.setIn([path, 'body'], bodyDataWithNewRow);
+}
 
-  return state.setIn(['uzsakymai', 'body'], naujiUzsakymai);
-};
+export const toggleNewRow = (state, {path}) => {
+  let isNewRowToggled = state.getIn(['isNewRowToggled', path]);
+  return state.setIn(['isNewRowToggled', path], !isNewRowToggled );
+}
 
+export const setInput = (state, {path, value}) => {
+  return state.setIn(path, value);
+}
 
 export default createReducer(
   initialState,
   {
-    [KURTI_NAUJA_UZSAKYMA] : kurtiNaujaUzsakyma
+    [TOGGLE_NEW_ROW] : toggleNewRow,
+    [SET_INPUT] : setInput,
+    [SAVE_ROW] : saveRow
   }
 );

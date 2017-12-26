@@ -9,15 +9,20 @@ class Table extends Component {
     super();
   }
   render () {
-    const { data } = this.props;
+    const { data, tableRowAction, isNewRowToggled, path, setInput, saveRow } = this.props;
 
     return (
       <div className='table'>
           <h2>{data.get('name')}</h2>
           <Header headers={data.get('headersNames')} />
-          <Body 
+          <Body
             headers={data.get("headersKeys")}
-            body={data.get('body')}  
+            body={data.get('body')}
+            tableRowAction = {tableRowAction}
+            isNewRowToggled = {isNewRowToggled}
+            path = {path}
+            setInput = {setInput}
+            saveRow = {saveRow}
            />
       </div>
     );

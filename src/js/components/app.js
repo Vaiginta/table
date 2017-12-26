@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
-import Produktai from './produktai';
-import Uzsakymai from './uzsakymai/uzsakymai';
-
+import Table from './table';
+import './app.scss';
 class App extends Component {
 
   constructor () {
     super();
   }
-  
-  render () {
-    const { produktai, uzsakymai } = this.props;
-    const uzakymaiProps = {
-      kurtiNaujaUzsakyma:this.props.kurtiNaujaUzsakyma
-    };
 
+  render () {
+
+    const {
+      produktai,
+      uzsakymai,
+      uzsakymoEilutes,
+      pasirinktaUzsakymoEilute,
+      pasirinktiUzsakymoEilute,
+      kurtiNaujaUzsakyma,
+      toggleNewRow,
+      isNewRowToggled,
+      cellValues,
+      setInput,
+      saveRow
+    } = this.props;
+console.log(uzsakymoEilutes.toJS());
     return (
       <div className='app-root'>
-        <Uzsakymai 
-          {...{uzsakymai, uzakymaiProps}}
-        />
-        <Produktai 
-          {...{produktai}}
-        />
+        <div className='eilute-wrapper'>
+          <div className='new-row-btn' onClick={() => toggleNewRow('uzsakymoEilutes')}>new row</div>
+          <Table
+            data = {uzsakymoEilutes}
+            toggleNewRow = {toggleNewRow}
+            isNewRowToggled = {isNewRowToggled}
+            path = {'uzsakymoEilutes'}
+            setInput = {setInput}
+            saveRow = {saveRow}
+          />
+        </div>
       </div>
     );
   }

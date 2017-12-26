@@ -7,6 +7,10 @@ const mapStateToProps = state => {
     toggledValue: state.getIn(['app', 'toggledValue']),
     produktai: state.getIn(['app', 'produktai']),
     uzsakymai: state.getIn(['app', 'uzsakymai']),
+    uzsakymoEilutes: state.getIn(['app', 'uzsakymoEilutes']),
+    pasirinktaUzsakymoEilute: state.getIn(['app', 'pasirinktaUzsakymoEilute']),
+    isNewRowToggled: state.getIn(['app', 'isNewRowToggled']),
+    cellValues: state.getIn(['app', 'cellValues'])
   }
 }
 

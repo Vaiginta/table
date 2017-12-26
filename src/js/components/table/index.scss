@@ -5,14 +5,20 @@
 
         .table-row {
             display:table-row;
-            
+
             .table-cell {
                 display:table-cell;
-                width:300px;
+                width:200px;
                 height:30px;
                 line-height:30px;
                 text-align:center;
                 border:1px solid black;
+                min-width:200px;
+
+                input {
+                  width:90%;
+                  margin:0 auto;
+                }
             }
         }
     }
@@ -25,13 +31,14 @@
 
             .header-cell {
                 display:table-cell;
-                width:300px;
+                width:200px;
                 height:30px;
                 line-height:30px;
                 text-align:center;
                 font-weight:bold;
                 border:1px solid black;
                 background-color:#CCC;
+                min-width:200px;
             }
         }
     }
